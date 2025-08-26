@@ -1,7 +1,15 @@
-export default function Home() {
+import HeroSection from '@/components/heroSection';
+import ConcertsSection from '@/components/concertsSection';
+
+export default function HomePage() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    // Używamy fragmentu (<>...</>), bo nie potrzebujemy dodatkowego kontenera.
+    // Navbar i Footer pojawią się automatycznie dzięki layout.tsx.
+    <>
+      <HeroSection />
+      <ConcertsSection />
+      {/* <AboutUsSection /> */}
+      {/* <SupportSection /> */}
+    </>
   );
 }
